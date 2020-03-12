@@ -5,7 +5,7 @@ var win;
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response), win = window.open("www.github.com\kbatra2\kbatra2.github.io\1.webp", '1366002941508')
+      .then(response => console.log('Success!', response), win = window.open("www.github.com//kbatra2//kbatra2.github.io//blob//master//1.webp", '1366002941508')
       ,setTimeout(function () { win.close();}, 2100))
       .catch(error => console.error('Error!', error.message))
   })
