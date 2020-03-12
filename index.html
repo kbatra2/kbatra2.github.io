@@ -15,7 +15,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('1.webp');
+  background-image: url('1.png');
   min-height: 100%;
 }
 </style>
@@ -198,16 +198,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
     <p>Lets get in touch. Send me a message:</p>
-    <form id="test-form" >
+    <form name="submit-to-google-sheet" >
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"  name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject"  name="Subject"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email"  name="Email"></p>
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" id="submit-form" type="submit">
+        <button class="w3-button w3-light-grey w3-padding-large" id="vaidate" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
+    <h2 id='result'></h2>
   <!-- End Contact Section -->
   </div>  
   
@@ -222,7 +223,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
 <!-- END PAGE CONTENT -->
 </div>
-
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script src="validations.js"></script>
+<script src="input.js"></script>
 <script>
 // Open and close sidebar
 function openNav() {
@@ -234,20 +239,5 @@ function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
 </script>
-<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxAMPVXWyrMmJlAGpQvuBgEew9CsLt4lN-X6Oclqz8nGOIdbrdP/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
 </body>
 </html>
