@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<title>Kushal Batra</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/circle.css">
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px 10px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 10px;
+  background-color:white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+  .fa {
+  padding: 10px;
+  font-size: 20px;
+  color: #125688;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-github {
+  background: #0c0c0c;
+  color: white;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif;background-color: beige;}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  overflow:-moz-hidden-unscrollable;
+  position:sticky;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url('me1.jpg');
+  background-color:beige;
+  min-height: 62%;
+}
+.lol
+{
+background-color:white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: black;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-small w3-hide-small" style="width:35%">
+<div class="bgimg"></div>
+  <h1 class="w3-xxlarge w3-white w3-center"><b>Kushal Batra</b></h1>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button class="w3-button w3-center w3-beige ">
+    <i class="fa fa-download"></i> <a href="kb.pdf" download="kb.pdf" target="_blank">Download Resume</a>
+  </button><br><br>
+  <footer class="  w3-white w3-center w3-opacity w3-small" style="margin:7px">
+ <a href='https://github.com/s0nicboOm'><i class="fa fa-github w3-hover-opacity" ></i></a>
+ <i class="fa fa-instagram w3-hover-opacity"></i>
+ <i class="fa fa-twitter w3-hover-opacity"></i>
+ <a href='https://www.linkedin.com/in/kushal-batra/'><i class="fa fa-linkedin w3-hover-opacity"></i></a></nav>
+</footer>
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate w3-xlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-large w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#me" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo" id='me'>Kushal Batra</b></h1>
+    <marquee><p><i>Looking for an internship role in AI / Software Development</i></p></marquee>
+    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> <a href="kb.pdf" download="kb.pdf" target="_blank">Download Resume</a>
+    </button>
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">MY PORTFOLIO</h2>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/rocks.jpg" style="width:100%">
+        <img src="/w3images/sailboat.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="/w3images/underwater.jpg" style="width:100%">
+        <img src="/w3images/chef.jpg" style="width:100%">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/p6.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>ABOUT</h2>
+    <hr class="w3-opacity">
+    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+
+<BR>
+    <h2 class="w3-padding-16" >Coding</h2>
+    <div>
+    <div class="c100 p85">
+      <span>Python</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="c100 p90">
+      <span>C/C++</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="c100 p75 ">
+      <span>Java</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="c100 p75">
+      <span>Matlab</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="c100 p80">
+      <span>JS</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="c100 p75">
+      <span>PHP</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+    </div>
+    <hr><hr><hr><hr><hr><hr>
+    <hr><hr><hr><hr><hr><hr>
+    <hr><hr><hr><hr><hr><hr>
+    <h2 class="w3-padding-16" >Skills</h2>
+    <p class="w3-wide">Deep Learning/ Machine Learning</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide">Algorithms and Data Structures</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide">TensorFlow</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">OpenCV</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:75%">75%</div>
+    </div>
+    <p class="w3-wide">Software Security</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">Software Engineering</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide">Quantum Computing</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-round w3-padding-small w3-red" style="width:70%">70%</div>
+    </div>
+    <br>
+    
+    <!-- Education -->
+    <br>
+
+    <h3 class="w3-padding-24">Education</h3>
+    <img src="ncsu.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:70px">
+    <p><span class="w3-large w3-text-black w3-margin-right">North Carolina State University (Attending)<br></span> <b><i>Masters in Computer Science<br>CGPA: 4</i></b></p>
+    <p>Software for Robotics | Quantum computing | Graph Theory | Software Engineering | Software Security | Algorithms and Analysis</p><br>
+
+    <img src="srm.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:70px">
+    <p><span class="w3-large w3-text-black w3-margin-right">SRM Institute of Science and Technology (2015-2019)<br></span> <b><i>Bachelors in Computer Science and Engineering<br>CGPA: 3.89</i></b></p>
+    <p>Machine Learning | Artificial Intelligence and Expert Systems | Operating Systems | Data Structures | Nature Inspired Computing | Statistical and Numerical Methods | Database Management Systems | Computer Networks</p><br>
+  
+  
+    <!-- Experience-->
+    <h3 class="w3-padding-24">Experience</h3>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h5><img src="wipro.jpg" alt="Avatar" class="w3-left w3-margin-right" style="width:40px"></h5>
+          <p><b>WIPRO Pvt. Ltd.<i> <br><br>Software Engineer Intern</i></b><br><i>(June-17 to July-17)</i><br><br> Implemented SAP ABAP Reports and Smartform. Worked on all 7 types of reports: Interactive and Classical Report.
+            Also worked on creating customizable objects for the client using C++.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h5><img src="valvoline.jpg" alt="Avatar" class="w3-left w3-margin-right" style="width:40px"></h5>
+          <p><b>Valvoline Cummins India<i> <br><br>Software Engineer Intern</i></b><br><i>(Dec-17 to Feb-19)</i><br><br>Maintained and developed Salesforce platform for the company’s client. It was like a CRM platform developed using
+            inbuilt salesforce tools and some coding in Apex.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h5><img src="cp.jpg" alt="Avatar" class="w3-left w3-margin-right" style="width:40px"></h5>
+          <p><b>Collaborations Pharmaceuticals<i> <br><br>Machine Learning Intern</i></b><br><i>(May-20   to July-20)</i><br><br>Developed ML models along with SMILES for drug discovery. Worked especially with the COVID-19 data and made predictions for compounds to check whether they will be active against the virus. Also, implemented the SVM and Deep Learning model for the same on IBM Qiskit to compare the results.</p>
+        </div>
+      </div>
+    </div> 
+
+
+
+
+
+
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">14+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class=" w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> 1822 Gorman Place, Raleigh, US</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 919-396-1299</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: kbatra2@ncsu.edu</p>
+    </div>
+    
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+   
+    <p>Lets get in touch. Send me a message:</p>
+    <form name="submit-to-google-sheet">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"  name="Name" required> </p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject"  name="Subject" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email"  name="Email" required></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" id="vaidate" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <h2 id='result'></h2>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <a href='https://github.com/s0nicboOm'><i class="fa fa-github w3-hover-opacity" ></a></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href='https://www.linkedin.com/in/kushal-batra/'><i class="fa fa-linkedin w3-hover-opacity"></a></i>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script src="validations.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="input.js"></script>
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+function pinakifun(){
+  swal("Congrats!","Your Message has been sent","success");
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+</body>
+</html>
